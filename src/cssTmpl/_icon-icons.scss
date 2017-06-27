@@ -1,0 +1,10 @@
+// Icons
+// --------------------------
+
+.#{$icon-font-class}<% _.each(glyphs, function(glyph) { %>,
+.#{$icon-prefix}<%= glyph.name %>:before<% }); %>
+{
+  @extend .i;
+}
+<% _.each(glyphs, function(glyph) { %>.#{$icon-prefix}<%= glyph.name %>:before { content: $icon-var-<%= glyph.name %>; }
+<% }); %>

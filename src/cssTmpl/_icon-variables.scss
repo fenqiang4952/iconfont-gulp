@@ -1,0 +1,12 @@
+// Icons Variables
+// --------------------------
+
+$icon-font-path:   "<%= static_font_path %>" !default;
+$icon-font-name:   "<%= fontname %>" !default;
+$icon-font-family: "<%= fontfamily %>" !default;
+$icon-font-class:  "<%= fontclass %>" !default;
+$icon-version:     "<%= version %>" !default;
+$icon-prefix: "" !default;
+
+<% _.each(glyphs, function(glyph) { %>
+$icon-var-<%= glyph.name %>:"\<%= glyph.unicode[0].charCodeAt(0).toString(16).toUpperCase() %>";<% }); %>
